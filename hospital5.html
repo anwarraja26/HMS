@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management Dashboard</title>
+    <title>Government Hospital Tiruvallur</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #a1c4fd, #c2e9fb);
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 100vh;
         }
@@ -18,13 +18,14 @@
         .container {
             background: white;
             padding: 2rem;
-            margin-top: 230px;
+            margin-top: 150px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 900px;
+            max-width: 1500px;
             box-sizing: border-box;
             overflow: auto;
+            flex: 1;
         }
 
         h1 {
@@ -100,11 +101,85 @@
         #conth1 {
             margin-top: 10px;
         }
+
+         /* Header Styles */
+         .head {
+            background-color: #8dabc9;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: black;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .headul{
+            margin-right:40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo_img {
+            width: 70px;
+            margin-right: 10px;
+            border-radius: 35px;
+        }
+
+        #logofont {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        .head_nav ul {
+            list-style-type: none;
+            font-size: 25px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .head_nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .head_nav a:hover {
+            text-decoration: underline;
+        }
+
+        .auth-buttons {
+            display: none; /* Hide auth buttons */
+        }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header class="head">             
+        <div class="logo">
+            <img src="./assets/logo.png" alt="Health Plus Logo" id="logo_img">
+            <h2 id="logofont">Government<br>Hospital<br>Tiruvallur</h2>
+        </div>
+       
+        <nav class="head_nav">
+            <ul class="home">
+                <li><a href="index.html" class="headul">Home</a></li>
+                <!-- <li><a href="aboutus.html" class="headul">About</a></li> -->
+                <!-- <li><a href="contact.html" class="headul">Contact</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1 id="conth1">Hospital Management Dashboard</h1>
+        <h1 id="conth1">Government Hospital Tiruvallur</h1>
 
         <!-- Appointment Details Section -->
         <div class="section" id="appointment-details">
@@ -143,7 +218,7 @@
             <div id="appointment-alert" class="alert"></div>
         </div>
 
-        
+        <!-- Bed Availability Section -->
         <div class="section" id="bed-availability">
             <h2>Bed Availability</h2>
             <form id="bedForm">
@@ -169,7 +244,6 @@
                     </tr>
                 </thead>
                 <tbody id="bed-table-body">
-                    
                     <tr>
                         <td>General</td>
                         <td>30</td>
@@ -192,7 +266,7 @@
             </table>
         </div>
 
-       
+        <!-- Stock Management Section -->
         <div class="section" id="stock-management">
             <h2>Stock Management</h2>
             <form id="stockForm">
@@ -215,7 +289,6 @@
                     </tr>
                 </thead>
                 <tbody id="stock-table-body">
-                  
                     <tr>
                         <td>Bandages</td>
                         <td>150</td>
@@ -232,6 +305,8 @@
             </table>
         </div>
     </div>
+
+   
 
     <script>
         

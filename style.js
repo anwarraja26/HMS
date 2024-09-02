@@ -32,3 +32,4 @@ offerBoxes.forEach(box => {
         }
     });
 });
+
