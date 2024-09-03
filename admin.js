@@ -74,7 +74,7 @@ function showDoctors() {
         <div class="header">
             <h1>Doctors in the Network</h1>
             <button class="add-button" onclick="addDoctor()">
-                <i>➕</i> Add Doctor
+                <i>➕</i> View More Doctors
             </button>
         </div>
 
